@@ -44,13 +44,8 @@ dependencies:
 
 # The mounts that will be performed when the package is deployed.
 mounts:
-    "/web/wp-content/uploads": "shared:files/uploads"
-    "/web/wp-content/cache": "shared:files/cache"
-    "/web/wp-content/plugins": "shared:files/plugins"
-    "/web/wp-content/themes": "shared:files/themes"
-    "/web/wp-content/upgrade": "shared:files/upgrade"
+    "/web/wp-content": "shared:files/wp-content"
 
 hooks:
     deploy: |
-        cp -R web/wp/wp-content/plugins/* web/wp-content/plugins/
-        cp -R web/wp/wp-content/themes/* web/wp-content/themes/
+        rsync -r web/wp/wp-content/* web/wp-content/
