@@ -33,6 +33,9 @@ web:
             expires: 600
             scripts: true
             allow: true
+        "/wp-content":
+            scripts: true
+            allow: true
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
