@@ -3,7 +3,7 @@
 # Each route describes how an incoming URL is going
 # to be processed by Platform.sh.
 
-"https://{default}/":
+"https://{all}/":
     type: upstream
     upstream: "app:http"
     cache:
@@ -15,6 +15,6 @@
           - '/^wordpress_sec_/'
           - 'wordpress_test_cookie'
 
-"https://www.{default}/":
+"https://www.{all}/":
     type: redirect
-    to: "https://{default}/"
+    to: "https://{all}/"
