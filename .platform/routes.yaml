@@ -13,8 +13,13 @@
       cookies:
           - '/^wordpress_logged_in_/'
           - '/^wordpress_sec_/'
-          - 'wordpress_test_cookie'
 
 "https://www.{all}/":
     type: redirect
     to: "https://{all}/"
+
+"https://{all}/wp/wp-login.php?action=rp*":
+    type: upstream
+    upstream: "app:http"
+    cache:
+      enabled: false
