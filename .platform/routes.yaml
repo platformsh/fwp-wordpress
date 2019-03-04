@@ -13,6 +13,7 @@
       cookies:
           - '/^wordpress_logged_in_/'
           - '/^wordpress_sec_/'
+          - '/PHPSESSID/'
 
 "https://www.{all}/":
     type: redirect
