@@ -36,6 +36,13 @@ web:
         "/wp-content":
             scripts: true
             allow: true
+        "/wp-content/uploads":
+            root: "web/wp-content/uploads"
+            scripts: false
+            allow: false
+            rules:
+                '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf|pdf)$':
+                    allow: true
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
