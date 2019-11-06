@@ -33,11 +33,12 @@ web:
             expires: 600
             scripts: true
             allow: true
+            rules:
+                '^/wp/xmlrpc\.php$':
+                    scripts: false
+                    allow: false
         "/wp-content":
-            scripts: true
-            allow: true
-        "/wp-content/uploads":
-            root: "web/wp-content/uploads"
+            root: "web/wp-content"
             scripts: false
             allow: false
             rules:
