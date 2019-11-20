@@ -44,6 +44,10 @@ web:
             rules:
                 '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf|pdf)$':
                     allow: true
+        "/wp-content/themes":
+           root: "web/wp-content/themes"
+           scripts: true
+           allow: true 
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
