@@ -47,6 +47,10 @@ web:
         "/wp-content/themes":
            root: "web/wp-content/themes"
            scripts: true
+           allow: true
+        "/wp-content/plugins":
+           root: "web/wp-content/plugins"
+           scripts: true
            allow: true 
 
 # The size of the persistent disk of the application (in MB).
