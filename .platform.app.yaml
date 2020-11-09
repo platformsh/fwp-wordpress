@@ -65,7 +65,7 @@ dependencies:
 mounts:
     "/web/wp-content":
         source: local
-        source_path: "files/wp-content"
+        source_path: "wp-content"
 
 hooks:
     deploy: |
