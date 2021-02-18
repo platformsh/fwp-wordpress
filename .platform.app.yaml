@@ -69,4 +69,7 @@ mounts:
 
 hooks:
     deploy: |
-        rsync -r web/wp/wp-content/* web/wp-content/
+        set -e
+        if ! $(wp core is-installed 2> /dev/null); then
+            rsync -r web/wp/wp-content/* web/wp-content/
+        fi
