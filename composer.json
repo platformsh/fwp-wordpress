@@ -10,8 +10,10 @@
     ],
     "require": {
         "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
-        "johnpbloch/wordpress": "5.8.1",
-        "johnpbloch/wordpress-core": "5.8.1"
+        "johnpbloch/wordpress": "5.8.2",
+        "johnpbloch/wordpress-core": "5.8.2",
+        "wp-cli/wp-cli-bundle": "^2.5",
+        "psy/psysh": "^0.10.9"
     },
     "extra": {
         "wordpress-install-dir": "web/wp",
