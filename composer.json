@@ -10,8 +10,8 @@
     ],
     "require": {
         "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
-        "johnpbloch/wordpress": "5.8.3",
-        "johnpbloch/wordpress-core": "5.8.3",
+        "johnpbloch/wordpress": "5.9.1",
+        "johnpbloch/wordpress-core": "5.9.1",
         "wp-cli/wp-cli-bundle": "^2.5",
         "psy/psysh": "^0.10.9"
     },
@@ -21,6 +21,11 @@
             "web/wp-content/plugins/{$name}": ["type:wordpress-plugin"],
             "web/wp-content/themes/{$name}": ["type:wordpress-theme"],
             "web/wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true
         }
     }
 }
